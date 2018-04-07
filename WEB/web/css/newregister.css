@@ -1,0 +1,269 @@
+@media (min-width: 700px) {
+    /* BODY
+    ==============================================
+    */
+    body{
+        margin: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+
+    }
+    body {
+        display: grid;
+        grid-template-columns:0.05fr 1.5fr 1fr 0.05fr;
+        grid-template-areas:
+            "nav nav search search"  "main main main main";
+
+        grid-template-rows: 75px 1fr;
+        background-color: #EFE7EA1A;
+    }
+
+    /* NAVIGATION
+    =============================================== 
+    */
+    nav li {
+        color: #606A74;
+        display: inline-block;
+        padding: 1em;
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+    nav ul {
+        margin: 0;
+    }
+    li a {
+        color: #606A74;
+        display: block;
+        text-align: center;
+        text-decoration: none;     
+        font-weight: bold;
+    }
+    li a:hover {
+        color: rgb(12, 12, 12);
+    }
+    html,body{
+        height: 100%;
+    }
+    nav {
+        grid-area: nav;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 0.05px ridge rgb(194, 201, 207);
+        background-color: white;
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    /* IMAGE 
+    ======================================
+    */
+    nav img {
+        display: inline-block;
+        width: 22px;
+    }
+    main img {
+        width: 400px;
+        position: relative;
+        padding: 0.4em;
+    }
+    img:hover{
+        opacity: 0.7; 
+        cursor: pointer;
+    }
+    /* SEARCH 
+    ======================================
+    */
+    .search {
+        grid-area: search;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0.05px ridge rgb(194, 201, 207);
+        background-color: white;
+    }
+    input::-moz-placeholder { /* WebKit browsers */
+        color: rgb(108, 119, 129);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: initial;
+        padding-left: 5px;
+        font-size: 13px;
+
+    }
+
+    #search_text {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: rgb(194, 201, 207) solid 0.05px;
+        /* left: 500px; */
+        /* top: 25px; */
+        float:right;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.15s;
+        box-sizing: border-box;
+        margin-left: 1em;
+        height: 28px;
+        width: 305px;
+        padding-left: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 13px;
+        outline:none;
+    }
+
+    #search_button {
+        border: none;
+        cursor: pointer;
+        position: relative;
+        top: 3px;
+        right: -323px;
+        width: 30px;
+        height: 23px;
+        background:
+            url(images/search.png) no-repeat center;
+        background-size: 20px 20px;
+    }
+
+
+    #search_text:focus{
+        outline: none;
+        border: rgb(194, 201, 207) solid 0.05px;
+    }
+
+    main {
+        background-color: inherit;
+        background: url(images/white1.jpg) no-repeat center center fixed;
+        background-size: cover;
+        justify-items: center;
+    }
+    /*FORM
+    ===========================================================
+    */
+    table h3{
+        color:black;
+        margin: 5px;
+    }
+
+    table {
+        position: relative;
+        padding: 10px;      
+        width: auto;
+        z-index: 1;
+        margin: 10px 0px 0px 30px;
+    }
+    tr:last-child{
+        /* position: absolute; */
+        display:  inline-block;
+
+    }
+    .note {
+        font-size:19px
+            color:black;
+    }
+    .note a{
+        font-size: 1em;
+        text-decoration: none;
+        color: black;
+    }
+    .note a:hover{
+        font-size: 20px;
+        color: black;
+
+    }
+    .name {
+        width: 116px;
+    }
+
+    /* INPUT
+    ===========================================================================
+    */
+
+
+    input[type=submit]{
+        outline: none;
+        font-family: lucida sans;
+        font-size: 18px;
+        cursor: pointer;
+        color: black;
+        border: none;
+        font-weight: bold;
+        background-color: white;
+        border: 1px solid;
+    }
+    input[type=submit]:active {
+        bottom: 1px;
+    }
+    input[type=radio]{
+        font-size: 14px;   
+    }
+
+    input[type=text]:active,
+    input[type=tel]:active,
+    input[type=date]:active,
+    input[type=email]:active,
+    input[type=password]:active {
+        height: 101%;
+
+    }
+    #bday{
+        width: 218px;
+    }
+
+    input[type=tel], input[type=email], input[type=password] 
+    {
+        width: 240px;
+    }
+    input[type=tel], input[type=text], input[type=email], input[type=date], input[type=radio], input[type=password], label,input#bday  {
+
+        border-top: 0;
+
+        border-left: 0;
+
+        border-right: 0px;
+
+        border-bottom: rgb(194, 201, 207) solid 0.05px;
+
+        background-color: inherit;
+
+        outline: none;
+
+        color: gray;
+
+        font-family: times new roman;
+
+        font-size: 18px;
+
+        padding-bottom: 1px;
+
+        padding-left: px;
+
+        overflow: visible;
+
+    }
+
+    input[type=date] {
+        font-size: 14px;
+        height: 25px;
+        width: 244px;
+    }
+    td {
+        font-family: arial;
+        font-weight: normal;
+        color: #332e2e;
+        padding: 10px;
+        font-size: 1.3em;
+    }
+    table input::placeholder, #bday{
+        font-size: 16px;
+        color:rgb(96, 77, 77);
+        font-weight: lighter;
+    }
+}

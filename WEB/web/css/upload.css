@@ -1,0 +1,30 @@
+body
+{
+    width:100%;
+    margin:0 auto;
+    padding:0px;
+    font-family:helvetica;
+
+}
+#wrapper
+{
+    margin:10px auto;
+    padding:10px;
+    width:995px;
+    border: 1px solid red;
+}
+#output_image
+{
+    max-width:150px;
+    padding-top: 10px;
+    position: relative;
+    /*! padding-left: 25%; */
+    z-index: 3;
+    /*! position: absolute; */
+}
+input {
+    /*! display:block; */
+    position: absolute;
+    z-index: 33;
+    font-size: 20px;
+}

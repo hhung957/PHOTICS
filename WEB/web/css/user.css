@@ -1,0 +1,214 @@
+/* BODY 
+==============================================
+*/
+html,body{
+    height: 100%;
+}
+body { 
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: normal  ;
+
+}
+body {
+    display: grid;
+    grid-template-columns: 100px 100px 0.5fr ;
+    grid-template-areas:
+        "nav exten main" ;
+
+    background-color: #EFE7EA1A;
+}
+/* NAVIGATION
+=============================================== 
+*/
+/* nav li {
+  color: #606A74;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 15px;
+} */
+nav a {
+    color: #373A3E;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 5px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: rgb(151, 149, 149);
+}
+/*       nav {
+        grid-area: nav;
+        display: grid;
+        grid-template-areas: 
+        "home"
+        "friend"
+        "gallery"
+        "setting";
+        grid-gap: 1em;
+        align-items: center;
+        text-align: center;
+        border-bottom: 0.05px ridge rgb(194, 201, 207);
+        background-color: white;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      } */
+nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+        "1"
+        "2"
+        "3"
+        "4"
+        "5"
+        "6";
+
+    grid-gap: 0.5em;
+    align-items: center;
+    text-align: center;
+    border-right: 0.5px solid #B5BBC2;
+}
+home {
+    grid-area:1;
+}
+.friend {
+    grid-area: 2;
+}
+.gallery {
+    grid-area: 3;
+}
+.setting {
+    grid-area: 4;
+}
+.explore {
+    grid-area: 5;
+}
+.signout {
+    grid-area: 6;
+}
+
+li a{
+    color: #606A74;
+    display: block;
+    text-align: center;
+    text-decoration: none;     
+    font-weight: bold;
+    padding-bottom: 5px;
+    width: 100px;
+}
+li a:hover {
+    color: rgb(12, 12, 12);
+}
+nav img {
+    display: block;
+    width: 25px;
+    position: relative;
+    left: 38px;
+}
+/* EXTENSION 
+======================================
+*/
+exten {
+    grid-area: exten;
+    display: grid;
+    grid-template-columns: 150px 50px;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-areas: 
+        "list icon"
+        "images number"
+        "approval number"
+        "noti number";
+    justify-items: center;
+    background-color: #007585;
+}
+list {
+    grid-area: list;
+    align-self: center;
+}
+exten p {
+    display: inline-block;
+    font-size: 13px;
+    color: #e4e4e4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+}
+approval {
+    grid-area: approval;
+}
+icon {
+    grid-area: icon;
+    align-self: center;
+}
+icon img {
+    width: 17px;
+    cursor: pointer;
+}
+images {
+    grid-area: images;
+}
+number {
+    grid-area: number;
+}
+/* SEARCH 
+======================================
+*/
+.search {
+    grid-area: search;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.05px ridge rgb(194, 201, 207);
+    background-color: white;
+}
+input::-moz-placeholder { /* WebKit browsers */
+    color: rgb(108, 119, 129);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: initial;
+    padding-left: 5px;
+    font-size: 13px;
+}
+#search_text {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: rgb(194, 201, 207) solid 0.05px;
+    /* left: 500px; */
+    /* top: 25px; */
+    float:right;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.15s;
+    box-sizing: border-box;
+    margin-left: 1em;
+    height: 28px;
+    width: 305px;
+    padding-left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    outline:none;
+}
+
+#search_button {
+    border: none;
+    cursor: pointer;
+    position: relative;
+    /* top: 26px; */
+    right: 27px;
+    width: 30px;
+    height: 23px;
+    background:
+        url(images/search.png) no-repeat center;
+    background-size: 20px 20px;
+}
+
+#search_text:focus{
+    outline: none;
+    border: rgb(194, 201, 207) solid 0.05px;
+}
